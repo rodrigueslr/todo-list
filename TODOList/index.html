@@ -16,39 +16,11 @@
 
             <section id="tasks">
                 <h2>Tarefas</h2>
-                <ul>
-                    <li>
-                        <span>Minha primeira tarefa</span>
-                        <button>Remover</button>
-                    </li>
-                </ul>
+                <ul></ul>
             </section>
 
         </div>
 
-        <script>
-            const tasks = []
-
-            function addTask (text) {
-                tasks.push(text)
-            }
-
-            function removeTask (index) {
-                tasks.splice(index, 1)
-            }
-
-            const btnElement = document.querySelector("#form button")
-            const inputElement = document.querySelector("#form input")
-
-            btnElement.onclick = () => {
-                if(inputElement.value) {
-                    addTask(inputElement.value)
-                    inputElement.value = ""
-                }
-                console.log(tasks)
-            }
-
-            
-        </script>
+        <script src="./main.js"></script>
     </body>
 </html>
