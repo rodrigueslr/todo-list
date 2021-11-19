@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Codar.me - Exercício 3.2: Funções</title>
+    </head>
+    <body>
+        <script>
+
+            function calc (valor1, valor2, valor3, valor4) {
+                return valor1 + valor2 + valor3 + valor4
+            }
+
+            var soma = calc(5, 10, 15, 20) + 10
+            
+            console.log(soma)
+
+
+            //arrow function
+            var arrow = (valor1, valor2) => {
+                return valor1 + valor2
+            }
+
+            console.log(arrow(1, 2));
+
+            //iife function
+            (function () {
+                console.log("Estou aprendendo JavaScript!")
+            }) ()
+
+            function calc2 (valor1, valor2, valor3) {
+                if (valor1 === undefined || valor2 === undefined || valor3 === undefined) {
+                    console.log("Os valores nao foram preenchidos corretamente!")
+                } else {
+                    return (valor1 + valor2 + valor3) * 4
+                }
+            }
+
+            console.log(calc2(1))
+            console.log(calc2(1,2,3))
+
+            function calc3 (valor1, valor2, valor3, valor4) { 
+                switch (true) {
+                    case valor1 === undefined && valor2 === undefined && valor3 === undefined:
+                        return false
+
+                    case valor1 !== undefined && valor2 !== undefined && valor3 !== undefined && valor4 !== undefined:
+                        return (valor1 + valor2) / (valor3 + valor4)
+                    
+                    case valor1 !== undefined && valor2 !== undefined && valor3 !== undefined:
+                        return (valor1 + valor2) * valor3
+
+                    case valor1 !== undefined && valor2 !== undefined:
+                        return valor1 * valor2
+
+                    case valor1 !== undefined:
+                        return valor1
+                }
+            }
+
+            console.log(calc3(5))
+            console.log(calc3(6, 6))
+            console.log(calc3(3, 3, 5))
+            console.log(calc3(25, 25, 5, 5))
+            console.log(calc3())
+
+        </script>
+    </body>
+</html>

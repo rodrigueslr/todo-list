@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Codar.me - Exercício 3.7: Classes</title>
+    </head>
+    <body>
+        <script>
+
+            class CalcFun {
+                constructor () {
+                    this.history = []
+                    console.log(this)
+                }
+
+                soma (n1, n2) {
+                    const result = n1 + n2
+                    this.history.push(result)
+                    return result
+                }
+
+                sub (n1, n2) {
+                    const result = n1 - n2
+                    this.history.push(result)
+                    return result
+                }
+
+                mult (n1, n2) {
+                    const result = n1 * n2
+                    this.history.push(result)
+                    return result
+                }
+
+                div (n1, n2) {
+                    const result = n1 / n2
+                    this.history.push(result)
+                    return result
+                }
+            }
+
+            class CalcSmart extends CalcFun {
+                constructor () {
+                    super()
+                }
+            }
+
+            const calc = new CalcFun()
+            
+            console.log(calc.soma(2,3))
+            console.log(calc.sub(2,3))
+            console.log(calc.mult(2,3))
+            console.log(calc.div(2,3))
+
+            const calcS = new CalcSmart()
+
+            console.log(calc.soma(2,3))
+            console.log(calc.sub(2,3))
+            console.log(calc.mult(2,3))
+            console.log(calc.div(2,3))
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Codar.me - Exercício 4.1 Temporizadores</title>
+    </head>
+
+    <body>
+        <script>
+            
+            //javascript assíncrono
+            //setTimeout(callback, time) => call back é uma função, time é em ms - a função é executada depois do tempo definido
+            //setInterval => a função é executada em intervalos definidos pelo tempo
+
+            const grabFruit = () => { console.log("Start!")
+                let fruit = 0
+
+                const interval = setInterval(() => {
+                    console.log(`Grab ${fruit} fruit`)
+                    fruit++
+                }, 1000);
+
+                setTimeout(() => {
+                    clearInterval(interval)
+                    console.log("Game over!")
+                }, 20000);
+            }
+
+            grabFruit()
+            
+        </script>
+    </body>
+</html>

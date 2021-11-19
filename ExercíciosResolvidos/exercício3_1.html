@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Codar.me - Exercício 3.1: Var, let e const</title>
+    </head>
+    <body>
+        <script>
+
+            let js = true
+            let node = false
+
+            const alunos = {
+                alunoJs: "Marcos",
+                alunoNode: "Flavia"
+            }
+
+            var i = 0
+            while (i < 2) {
+                if (js) {
+                    console.log("O aluno que estuda JavaScript eh " + `${alunos.alunoJs}`)
+                } else if (node) {
+                    console.log("A aluna que estuda Node eh " + `${alunos.alunoNode}`)
+                }
+
+                js = false
+                node = true
+
+                ++i
+            }
+
+        </script>
+    </body>
+</html>

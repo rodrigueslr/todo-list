@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Codar.me - Exercício 3.5.1: Array Reduce</title>
+    </head>
+    <body>
+        <script>
+
+            const arr = [6, 2, 5, 11, 2, 21, 17];
+
+            (function somaElementos (arr1) {
+                let result = arr1.reduce(function (memo, current, index, arr1) {
+                    return memo + current
+                }, 0)
+
+                console.log("A soma de todos os valores do array eh igual: ", result)
+            }) (arr)
+            
+            
+
+        </script>
+    </body>
+</html>
